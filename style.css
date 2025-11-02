@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 2.0;
+    font-size: 15px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* モバイル: 上部ナビゲーション */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(248, 248, 248, 0.98);
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-nav .site-name {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    transition: opacity 0.3s ease;
+    margin-right: 10px;
+}
+
+.main-nav .site-name:hover {
+    opacity: 0.6;
+}
+
+.main-nav a {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #333;
+}
+
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 90px 25px 80px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    letter-spacing: 0.15em;
+    color: #333;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    letter-spacing: 0.08em;
+    color: #333;
+}
+
+.profile-line {
+    margin-bottom: 0.3em;
+    line-height: 2.2;
+    color: #444;
+}
+
+.profile-line a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+}
+
+.profile-line a:hover {
+    border-bottom-color: #333;
+}
+
+.section-gap {
+    margin-top: 2.5em;
+}
+
+.book-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.book-list li {
+    margin-bottom: 0.3em;
+    line-height: 2.0;
+    color: #444;
+}
+
+.book-section {
+    margin-bottom: 4em;
+}
+
+.project-item {
+    margin-bottom: 5em;
+}
+
+.project-image {
+    width: 100%;
+    margin-bottom: 1em;
+    display: block;
+}
+
+.project-title {
+    font-size: 15px;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.back-link {
+    margin-top: 4em;
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+.back-link:hover {
+    color: #333;
+    border-bottom-color: #333;
+}
+
+.contact-info {
+    margin-top: 2em;
+}
+
+.contact-info p {
+    margin-bottom: 2em;
+    line-height: 2.2;
+    color: #444;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    border-bottom-color: #333;
+}
+
+.other-section {
+    margin-bottom: 3em;
+}
+
+/* PC/タブレット: 左サイドバーレイアウト */
+@media (min-width: 769px) {
+    body {
+        padding-left: 240px;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 240px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 30px;
+        gap: 0;
+        border-bottom: none;
+        overflow-y: auto;
+    }
+
+    .main-nav .site-name {
+        font-size: 19px;
+        margin-bottom: 50px;
+        margin-right: 0;
+        display: block;
+    }
+
+    .main-nav a {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0;
+        padding: 60px 80px 100px 60px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+}
+
+/* より大きい画面用 */
+@media (min-width: 1200px) {
+    body {
+        padding-left: 280px;
+    }
+
+    .main-nav {
+        width: 280px;
+        padding: 60px 40px;
+    }
+
+    .main-nav .site-name {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 900px;
+        padding: 80px 100px 120px 80px;
+    }
+}
